@@ -12,6 +12,11 @@ import { CycleHoliday } from "./components/CycleHoliday";
 import { RevealAnswer } from "./components/RevealAnswer";
 import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
+import { ChangeColor } from "./form-components/ChangeColor";
+import { CheckAnswer } from "./form-components/CheckAnswer";
+import { EditMode } from "./form-components/EditMode";
+import { GiveAttempts } from "./form-components/GiveAttempts";
+import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
 function App(): JSX.Element {
     return (
         <div className="App">
@@ -69,6 +74,20 @@ function App(): JSX.Element {
             </Container>
             <hr></hr>
             <DoubleHalf></DoubleHalf>
+            <CheckAnswer expectedAnswer="42"></CheckAnswer>
+            <hr></hr>
+            <GiveAttempts></GiveAttempts>
+            <hr></hr>
+            <EditMode></EditMode>
+            <hr></hr>
+            <ChangeColor></ChangeColor>
+            <hr></hr>
+            <MultipleChoiceQuestion
+                options={["a", "b", "c"]}
+                expectedAnswer="b"
+            ></MultipleChoiceQuestion>
+            <hr></hr>
+            {<DoubleHalf></DoubleHalf>}
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
